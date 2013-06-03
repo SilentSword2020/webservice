@@ -1,0 +1,24 @@
+真机：可能是测试，会限制次数，提示403:禁止访问
+
+模拟器：OK
+
+要注意 android版本的影响：3.0以上，不能在主线程访问网络，要在子线程中。
+
+
+最好要判断一下网络。
+
+SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(SoapEnvelope.VER10);
+还有SOAP版本问题：只能低，不能高于服务器的版本。
+
+
+
+
+
+那个webservice（我试的是手机归属），真机访问有时可以，有时不可以。好像是不是免费的，访问有限制。
+
+会报IO异常：403
+
+用模拟器没有问题。
+
+
+我试了那个中英文翻译的（免费的），每次都可以。
